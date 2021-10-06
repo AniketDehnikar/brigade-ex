@@ -13,7 +13,7 @@ events.on("exec", () => {
     "cd /src",
     `docker login ${dockerRegistry} -u ${dockerhubUsername} -p ${dockerhubPassword}`,
     `DOCKER_REGISTRY=${aniketdehnikar11/aniket} DOCKER_ORG=${dockerOrg} VERSION=${20.10.7} make build-all-images push-all-images`,
-    `docker logout ${dockerRegistry}`
+    `docker logout ${aniketdehnikar11/aniket}`
     
     ]
   build.job();
