@@ -1,8 +1,6 @@
-const { events, Job } = require("brigadier");
+const { events, Job, Groups } = require("brigadier");
 events.on("exec", () => {
-  var one = new Job("job");
-  one.image = "alpine:3.4";
-  one.tasks = ["echo Hello"];
-  one.run();
-});
-
+  var build = new Job("build-job");
+  build.tasks = ["docker build -t myimage:10 python-deploy ."];
+  build.run();
+})
