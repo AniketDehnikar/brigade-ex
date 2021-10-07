@@ -1,3 +1,3 @@
-FROM dind-alpine
-
-CMD ["docker:rancher/dind-alpine"]
+FROM python
+ADD hello.py /home/hello.py
+CMD ["/home/hello.py"]
